@@ -1,0 +1,13 @@
+.profile-details {
+  margin-top: 50px;
+}
+.logout {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.profile-details-p {
+  text-align: left;
+}

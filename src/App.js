@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+
+import { BrowserRouter } from "react-router-dom";
+
+import PageCover from "./pages/pageCover/pageCover";
+import { useSelector } from "react-redux";
+import Signup from "./auth/signup";
+import signin from "./auth/signin";
+
+// console.log(getUserDetails);
 
 function App() {
+  const userCredentails = useSelector((state) => state.userCredentails);
+  const getUserDetails = userCredentails.userCredentials;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        {" "}
+        <PageCover />{" "}
+      </div>
+    </BrowserRouter>
   );
 }
 
